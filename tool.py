@@ -4,5 +4,4 @@ search = DuckDuckGoSearchRun()
 
 res = search.invoke("Top news in India")
 
-
 print(res)
