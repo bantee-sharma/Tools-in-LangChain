@@ -5,6 +5,7 @@ langchain-community
 pydantic 
 
 duckduckgo-search 
+
 langchain_experimental
 
 
