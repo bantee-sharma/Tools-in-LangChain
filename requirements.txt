@@ -2,6 +2,7 @@ langchain
 langchain-core 
 langchain-community 
 langchain_experimental
+
 pydantic 
 
 duckduckgo-search 
