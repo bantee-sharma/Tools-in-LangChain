@@ -3,6 +3,9 @@ langchain-core
 langchain-community 
 langchain_experimental
 
+langchain-google-genai
+google-generativeai
+
 pydantic 
 
 duckduckgo-search 
