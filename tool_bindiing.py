@@ -27,5 +27,6 @@ llm_with_tools = llm.bind_tools([multiply])
 
 result = llm_with_tools.invoke("can you multiply 10 with 3?")
 
-print(result.tool_calls[0])
+# print(result.tool_calls[0])
 
+print(multiply.invoke({'name': 'multiply', 'args': {'a': 10.0, 'b': 3.0}, 'id': '01dc8194-6b86-47ba-a666-8e755cd1b259', 'type': 'tool_call'}))
