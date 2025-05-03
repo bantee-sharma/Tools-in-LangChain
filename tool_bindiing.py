@@ -18,4 +18,6 @@ print(multiply.args)'''
 
 #tool binding
 
-llm.bind_tools([multiply])
+llm_with_tools = llm.bind_tools([multiply])
+
+print(llm_with_tools.invoke("Hi how are You?"))
