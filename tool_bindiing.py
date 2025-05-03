@@ -1,6 +1,7 @@
 from langchain_core.tools import tool
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
+from langchain_core.messages import HumanMessage
 
 load_dotenv()
 
@@ -22,11 +23,17 @@ print(multiply.args)'''
 
 llm_with_tools = llm.bind_tools([multiply])
 
-# print(llm_with_tools.invoke("Hi how are You?"))
+query = HumanMessage('Can you multiply 3 with 100')
 
+message = [query]
 
-result = llm_with_tools.invoke("can you multiply 10 with 3?")
+result = llm_with_tools.invoke(message)
 
-# print(result.tool_calls[0])
+message.append(result)
 
-print(multiply.invoke({'name': 'multiply', 'args': {'a': 10.0, 'b': 3.0}, 'id': '01dc8194-6b86-47ba-a666-8e755cd1b259', 'type': 'tool_call'}))
+tool_res = multiply.invoke(result.tool_calls[0])
+
+message.append(tool_res)
+
+print(llm_with_tools.invoke(message).content)
+
