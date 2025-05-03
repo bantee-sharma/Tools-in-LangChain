@@ -22,4 +22,10 @@ print(multiply.args)'''
 
 llm_with_tools = llm.bind_tools([multiply])
 
-print(llm_with_tools.invoke("Hi how are You?"))
+# print(llm_with_tools.invoke("Hi how are You?"))
+
+
+result = llm_with_tools.invoke("can you multiply 10 with 3?")
+
+print(result.tool_calls[0])
+
