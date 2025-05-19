@@ -1,13 +1,14 @@
 langchain 
 langchain-core 
 langchain-community 
-langchain_experimental
+langchain-experimental
 
 langchain-google-genai
 google-generativeai
 
+wikipedia
 pydantic 
-
+pyhton-dotenv
 duckduckgo-search 
 
 
