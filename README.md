@@ -4,7 +4,7 @@ This repository is part of my learning journey in Python tool development.
 
 It contains basic and custom-built Python scripts to understand how different components like utility functions, bindings, and modular design work together.
 
-What's included:
+**What's included:**
 
 custom_tool.py: My experiments with creating reusable utility functions.
 
