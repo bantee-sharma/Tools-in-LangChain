@@ -10,7 +10,8 @@ It contains basic and custom-built Python scripts to understand how different co
 
 My experiments with creating reusable utility functions.
 
-**tool.py:** A main script that runs core logic using my tools.
+**tool.py:**
+A main script that runs core logic using my tools.
 
 tool_bindiing.py: Code to connect or bind tools together for combined functionality.
 
