@@ -6,7 +6,8 @@ It contains basic and custom-built Python scripts to understand how different co
 
 **What's included:**
 
-**custom_tool.py:** My experiments with creating reusable utility functions.
+**custom_tool.py:** 
+My experiments with creating reusable utility functions.
 
 tool.py: A main script that runs core logic using my tools.
 
