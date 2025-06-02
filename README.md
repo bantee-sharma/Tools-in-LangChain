@@ -22,5 +22,4 @@ Code to connect or bind tools together for combined functionality.
 
 All the packages I’m using for this project.
 
-This project helps me explore real-world practices like writing modular code, handling dependencies, and organizing a Python project effectively.
 
