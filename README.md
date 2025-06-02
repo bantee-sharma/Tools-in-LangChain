@@ -14,7 +14,7 @@ My experiments with creating reusable utility functions.
 
 A main script that runs core logic using my tools.
 
-tool_bindiing.py: Code to connect or bind tools together for combined functionality.
+**tool_bindiing.py:** Code to connect or bind tools together for combined functionality.
 
 requirements.txt: All the packages I’m using for this project.
 
