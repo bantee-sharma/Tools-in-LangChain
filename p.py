@@ -1,6 +1,6 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
-from langchain_core.messages import HumanMessage,SystemMessage
+from langchain_core.messages import HumanMessage,SystemMessage,AIMessage
 
 load_dotenv()
 
@@ -20,7 +20,7 @@ while True:
         break
     else:
         resopnce = llm.invoke(chat_history)
-        chat_history.append(resopnce)
+        chat_history.append(AIMessage(content=resopnce.content))
         print("AI: ",resopnce.content)
     
 print(chat_history)
