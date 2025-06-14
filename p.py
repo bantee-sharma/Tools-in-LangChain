@@ -8,4 +8,4 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 question = "Who is president of america?"
 response = llm.invoke(question)
 
-print(response)
+print(response.content)
