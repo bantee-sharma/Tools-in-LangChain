@@ -1,12 +1,12 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage,SystemMessage
 
 load_dotenv()
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
-chat_history = []
+chat_history = [SystemMessage(content="Yor are a helpful AI Assistant")]
 
 while True:
     query = input("Ask me: ").strip()
