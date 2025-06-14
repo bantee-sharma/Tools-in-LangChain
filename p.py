@@ -6,7 +6,7 @@ load_dotenv()
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
-chat_history = [SystemMessage(content="Yor are a helpful AI Assistant")]
+chat_history = [SystemMessage(content="You are a helpful AI Assistant")]
 
 
 print("🤖 Hey! I'm your AI buddy. Ask me anything! Type 'exit' or 'quit' whenever you're done chatting.")
