@@ -8,11 +8,15 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 chat_history = [SystemMessage(content="Yor are a helpful AI Assistant")]
 
+
+print("🤖 Hey! I'm your AI buddy. Ask me anything! Type 'exit' or 'quit' whenever you're done chatting.")
+
+
 while True:
     query = input("Ask me: ").strip()
     chat_history.append(HumanMessage(content=query))
     if query.lower() in ["exit","quit"]:
-        print("Byee, I am exiting...")
+        print("AI : Goodbye! Have a great day!")
         break
     else:
         resopnce = llm.invoke(chat_history)
