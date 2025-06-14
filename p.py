@@ -9,8 +9,8 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 chat_history = []
 
 while True:
-    query = input(HumanMessage(content="Ask me: ")).strip()
-    chat_history.append(query)
+    query = input("Ask me: ").strip()
+    chat_history.append(HumanMessage(content=query))
     if query.lower() in ["exit","quit"]:
         print("Byee, I am exiting...")
         break
