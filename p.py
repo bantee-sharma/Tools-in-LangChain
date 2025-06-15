@@ -7,7 +7,7 @@ import streamlit as st
 
 load_dotenv()
 
-df = pd.read_excel("dataset netflix.xlsx")
+df = pd.read_csv("dataset netflix.csv")
 print(df.head())
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
