@@ -8,4 +8,4 @@ py = PythonREPLTool()
 
 query = 'print(2+5)'
 response = py.invoke(query)
-print(query)
+print(response)
