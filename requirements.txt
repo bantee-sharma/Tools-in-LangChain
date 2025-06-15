@@ -10,6 +10,9 @@ wikipedia
 pydantic 
 pyhton-dotenv
 duckduckgo-search 
+tabulate
+pandas
+streamlit
 
 
 
