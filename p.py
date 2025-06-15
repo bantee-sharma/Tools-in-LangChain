@@ -7,10 +7,10 @@ import streamlit as st
 
 load_dotenv()
 
-df = pd.read_csv("dataset netflix.csv")
+df = pd.read_csv("dataset_netflix.csv",encoding='latin1')
 print(df.head())
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+# llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 # csv_agent = create_csv_agent(
 #     llm=llm,
