@@ -8,18 +8,18 @@ import streamlit as st
 load_dotenv()
 
 df = pd.read_csv("dataset_netflix.csv",encoding='latin1')
-print(df.head())
+# print(len(df))
 
-# llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
-# csv_agent = create_csv_agent(
-#     llm=llm,
-#     path="dataset netflix.xlsx",
-#     allow_dangerous_code=True,
-#     verbose=True
-# )
+csv_agent = create_csv_agent(
+    llm=llm,
+    path="dataset netflix.xlsx",
+    allow_dangerous_code=True,
+    verbose=True
+)
 
-# query = "how many rows are there?"
-# response = csv_agent.invoke(query)
-# print(response)
+query = "how many rows are there?"
+response = csv_agent.invoke(query)
+print(response)
 
