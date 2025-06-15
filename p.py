@@ -1,6 +1,6 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
-from langchain_experimental.agents import create_csv_agent
+from langchain_experimental.agents import create_pandas_dataframe_agent
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -12,15 +12,16 @@ df = pd.read_csv("dataset_netflix.csv",encoding='latin1')
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
-csv_agent = create_csv_agent(
+csv_agent = create_pandas_dataframe_agent(
     llm=llm,
-    path="dataset_netflix.csv",
+    df=df,
+    agent_type="openai-tools",
     allow_dangerous_code=True,
     verbose=True,
-    pandas_kwargs={"encoding": "latin1"}
+    pandas_kwargs={"encoding": "latin1"},handle_parsing_errors=True
 )
 
-query = "how many rows are there?"
+query = "total count of types "
 response = csv_agent.invoke(query)
 print(response)
 
