@@ -14,9 +14,10 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 csv_agent = create_csv_agent(
     llm=llm,
-    path="dataset netflix.xlsx",
+    path="dataset_netflix.csv",
     allow_dangerous_code=True,
-    verbose=True
+    verbose=True,
+    pandas_kwargs={"encoding": "latin1"}
 )
 
 query = "how many rows are there?"
