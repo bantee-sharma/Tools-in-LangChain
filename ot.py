@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 
-parser = StrOutputParser
+parser = StrOutputParser()
 
 load_dotenv()
 
@@ -28,6 +28,6 @@ query = """Upgraded to the 16 from my 12 and it is a great phone. The Ultramarin
 
 chain = prompt | llm | parser
 
-response = chain.invoke(query)
+response = chain.invoke({"review":query})
 print(response)
 
