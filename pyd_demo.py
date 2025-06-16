@@ -8,6 +8,7 @@ model = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 class Review(TypedDict):
 
+    key_themes = list[str]
     summary:str
     sentiment:str
     pros:str
