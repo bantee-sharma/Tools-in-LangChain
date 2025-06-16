@@ -9,7 +9,7 @@ model = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 class Review(BaseModel):
 
-    key_themse:str = Field(description="Wrtie the key themes of review")
+    key_themse:str = list[Field(description="Wrtie the key themes of review")]
     summary:str = Field(description="Write the summary of the review")
     sentiment: str = Field(description="sentiment of the review")
 
