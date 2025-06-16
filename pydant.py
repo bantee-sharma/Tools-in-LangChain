@@ -13,7 +13,7 @@ class Review(BaseModel):
     summary:str = Field(description="Write the summary of the review")
     sentiment: str = Field(description="sentiment of the review")
 
-llm = model.with_structured_output(model)
+llm = model.with_structured_output(Review)
 
 query = """Upgraded to the 16 from my 12 and it is a great phone. The Ultramarine Blue looks and feels sooo good. 
     The photos don't do enough justice to this variant.
