@@ -11,6 +11,7 @@ class Review(TypedDict):
     summary:str
     sentiment:str
     pros:str
+    cons:str
     
 llm = model.with_structured_output(Review)
 query = '''Just upgraded to the iPhone 16 and I'm genuinely impressed. Apple has really stepped up their game with this one. The design is sleek and premium as always, but what really blew me away is the performance — everything feels lightning fast thanks to the new A18 chip.
