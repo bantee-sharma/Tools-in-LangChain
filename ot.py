@@ -4,16 +4,25 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
-
-parser = StrOutputParser()
+from langchain_core.output_parsers import PydanticOutputParser
 
 load_dotenv()
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
+class Review(BaseModel):
+
+    summary: str = Field(description="summary of the review")
+    sentiment: str 
+    pros: list[str]
+    cons: list[str]
+
+parser = PydanticOutputParser(pydantic_object=Review)
+
 prompt = PromptTemplate(
-    template="Give the sentiment of the following review:{review}",
-    input_variables=["review"]
+    template="Give the sentiment of the following review:{review}. \n {format_instruction}",
+    input_variables=["review"],
+    partial_variables={"format_instruction":parser.get_format_instructions()}
 )
 
 query = """Upgraded to the 16 from my 12 and it is a great phone. The Ultramarine Blue looks and feels sooo good. 
