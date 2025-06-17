@@ -29,6 +29,4 @@ query = """Upgraded to the 16 from my 12 and it is a great phone. The Ultramarin
     Also, got a great deal on the exchange and bank offer, so zero complaints."""
 
 
-
-response = llm.invoke(query)
-print(response)
+s
