@@ -36,4 +36,4 @@ tool_res = multiply.invoke(result.tool_calls[0])
 message.append(tool_res)
 
 print(llm_with_tools.invoke(message).content)
-
+    
