@@ -8,7 +8,7 @@ model = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
 class Review(TypedDict):
 
-    key_themes: Annotated[list[str], "Write  all the key themes discussed in the review in a list"]
+    key_themes: Annotated[list[str], " all the key themes discussed in the review in a list"]
     summary: Annotated[str, "A brief summary of the review"]
     sentiment: Annotated[Literal["pos", "neg"], "Return sentiment of the review either negative, positive or neutral"]
     pros: Annotated[Optional[list[str]], "Write down all the pros inside a list"]
