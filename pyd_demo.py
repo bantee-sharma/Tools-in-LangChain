@@ -1,7 +1,6 @@
 
 
- the review either negative, positive or neutral"]
-    pros: Annotated[Optional[list[str]], "Write down all the pros inside a list"]
+
     cons: Annotated[Optional[list[str]], "Write down all the cons inside a list"]
     name: Annotated[Optional[str], "Write the name of the reviewer"]
     
